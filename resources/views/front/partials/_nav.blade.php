@@ -27,10 +27,10 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
                     <ul class="dropdown-menu" aria-labelledby="dropdown05">
-                        <li><a class="dropdown-item" href="blog-grid.html">Blog Grid</a></li>
-                        <li><a class="dropdown-item" href="blog-sidebar.html">Blog with Sidebar</a></li>
+                        <li><a class="dropdown-item" href="{{ route('front.bloggrid') }}">Blog Grid</a></li>
+                        <li><a class="dropdown-item" href="{{ route('front.sidebar') }}">Blog with Sidebar</a></li>
 
-                        <li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
+                        <li><a class="dropdown-item" href="{{ route('front.single') }}">Blog Single</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('front.contact') }}">Contact</a>
