@@ -1,57 +1,153 @@
 @extends('front.layout')
 @section('_content')
- <!-- Slider Start -->
- <section class="slider">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9 col-md-10">
-                        <div class="block">
-                            <span class="d-block mb-3 text-white text-capitalize">Prepare for new future</span>
-                            <h1 class="animated fadeInUp mb-5">Our work is <br>presentation of our <br>capabilities.</h1>
-                            <a href="#" target="_blank" class="btn btn-main animated fadeInUp btn-round-full">Get started<i class="btn-icon fa fa-angle-right ml-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Section Intro Start -->
 
-        <section class="section intro">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-lg-8">
-                        <div class="section-title">
-                            <span class="h6 text-color ">We are creative & expert people</span>
-                            <h2 class="mt-3 content-title">We work with business & provide solution to client with their business problem </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="intro-item mb-5 mb-lg-0">
-                            <i class="ti-desktop color-one"></i>
-                            <h4 class="mt-4 mb-3">Modern & Responsive design</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="intro-item mb-5 mb-lg-0">
-                            <i class="ti-medall color-one"></i>
-                            <h4 class="mt-4 mb-3">Awarded licensed company</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="intro-item">
-                            <i class="ti-layers-alt color-one"></i>
-                            <h4 class="mt-4 mb-3">Build your website Professionally</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="page-title bg-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block text-center">
+          <span class="text-white">Our blog</span>
+          <h1 class="text-capitalize mb-4 text-lg">Blog articles</h1>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+            <li class="list-inline-item"><span class="text-white">/</span></li>
+            <li class="list-inline-item text-white-50">Our blog</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section blog-wrap bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 mb-5">
+				<div class="blog-item">
+                <img loading="lazy" src="{{ asset('assets/front/images/blog/1.jpg') }}" alt="blog" class="img-fluid rounded">
+
+
+					<div class="blog-item-content bg-white p-5">
+						<div class="blog-item-meta bg-gray pt-2 pb-1 px-3">
+							<span class="text-muted text-capitalize d-inline-block mr-3"><i class="ti-pencil-alt mr-2"></i>Creativity</span>
+							<span class="text-muted text-capitalize d-inline-block mr-3"><i class="ti-comment mr-2"></i>5 Comments</span>
+							<span class="text-black text-capitalize d-inline-block mr-3"><i class="ti-time mr-1"></i> 28th January</span>
+						</div>
+
+						<h3 class="mt-3 mb-3"><a href="blog-single.html">Improve design with typography?</a></h3>
+						<p class="mb-4">Non illo quas blanditiis repellendus laboriosam minima animi. Consectetur accusantium
+							pariatur repudiandae!</p>
+
+						<a href="blog-single.html" class="btn btn-small btn-main btn-round-full">Learn More</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6 col-md-6 mb-5">
+				<div class="blog-item">
+                <img loading="lazy" src="{{ asset('assets/front/images/blog/2.jpg') }}" alt="blog" class="img-fluid rounded">
+
+					<div class="blog-item-content bg-white p-5">
+						<div class="blog-item-meta bg-gray pt-2 pb-1 px-3">
+							<span class="text-muted text-capitalize d-inline-block mr-3"><i class="ti-pencil-alt mr-2"></i>Design</span>
+							<span class="text-muted text-capitalize d-inline-block mr-3"><i class="ti-comment mr-2"></i>5 Comments</span>
+							<span class="text-black text-capitalize d-inline-block mr-3"><i class="ti-time mr-1"></i> 28th January</span>
+						</div>
+
+						<h3 class="mt-3 mb-3"><a href="blog-single.html">Interactivity connect consumer</a></h3>
+						<p class="mb-4">Non illo quas blanditiis repellendus laboriosam minima animi. Consectetur accusantium
+							pariatur repudiandae!</p>
+
+						<a href="blog-single.html" class="btn btn-small btn-main btn-round-full">Learn More</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6 col-md-6 mb-5">
+				<div class="blog-item">
+                <img loading="lazy" src="{{ asset('assets/front/images/blog/3.jpg') }}" alt="blog" class="img-fluid rounded">
+
+					<div class="blog-item-content bg-white p-5">
+						<div class="blog-item-meta bg-gray pt-2 pb-1 px-3">
+							<span class="text-muted text-capitalize d-inline-block mr-3"><i class="ti-pencil-alt mr-2"></i>Community</span>
+							<span class="text-muted text-capitalize d-inline-block mr-3"><i class="ti-comment mr-2"></i>5 Comments</span>
+							<span class="text-black text-capitalize d-inline-block mr-3"><i class="ti-time mr-1"></i> 28th January</span>
+						</div>
+
+						<h3 class="mt-3 mb-3"><a href="blog-single.html">Marketing Strategy to bring more affect</a></h3>
+						<p class="mb-4">Non illo quas blanditiis repellendus laboriosam minima animi. Consectetur accusantium
+							pariatur repudiandae!</p>
+
+						<a href="blog-single.html" class="btn btn-small btn-main btn-round-full">Learn More</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 mb-5">
+				<div class="blog-item">
+                <img loading="lazy" src="{{ asset('assets/front/images/blog/4.jpg') }}" alt="blog" class="img-fluid rounded">
+
+					<div class="blog-item-content bg-white p-5">
+						<div class="blog-item-meta bg-gray pt-2 pb-1 px-3">
+							<span class="text-muted text-capitalize d-inline-block mr-3"><i class="ti-pencil-alt mr-2"></i>Marketing</span>
+							<span class="text-muted text-capitalize d-inline-block mr-3"><i class="ti-comment mr-2"></i>5 Comments</span>
+							<span class="text-black text-capitalize d-inline-block mr-3"><i class="ti-time mr-1"></i> 28th January</span>
+						</div>
+
+						<h3 class="mt-3 mb-3"><a href="blog-single.html">Marketing Strategy to bring more affect</a></h3>
+						<p class="mb-4">Non illo quas blanditiis repellendus laboriosam minima animi. Consectetur accusantium
+							pariatur repudiandae!</p>
+
+						<a href="blog-single.html" class="btn btn-small btn-main btn-round-full">Learn More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row justify-content-center mt-5">
+			<div class="col-lg-6 text-center">
+				<nav class="navigation pagination d-inline-block">
+					<div class="nav-links">
+						<a class="prev page-numbers" href="#">Prev</a>
+						<span aria-current="page" class="page-numbers current">1</span>
+						<a class="page-numbers" href="#">2</a>
+						<a class="next page-numbers" href="#">Next</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--Scroll to top-->
+<div id="scroll-to-top" class="scroll-to-top">
+  <span class="icon fa fa-angle-up"></span>
+</div>
+
+
+<!-- 
+Essential Scripts
+=====================================-->
+<!-- Main jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4.3.1 -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<!--  Magnific Popup-->
+<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<!-- Slick Slider -->
+<script src="plugins/slick/slick.min.js"></script>
+<!-- Counterup -->
+<script src="plugins/counterup/jquery.waypoints.min.js"></script>
+<script src="plugins/counterup/jquery.counterup.min.js"></script>
+
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+<script src="plugins/google-map/map.js" defer></script>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
 
         @endsection
-
-        <!-- Section Intro END -->

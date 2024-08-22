@@ -22,6 +22,7 @@ use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\BlogGridController;
 use App\Http\Controllers\Front\SideBarController;
 use App\Http\Controllers\Front\SingleController;
+use App\Http\Controllers\Admin\DashboardController;
 
 Route::get('/', [HomeController::class, 'index'])->name('front.index');
 Route::get('/about', [HomeController::class, 'about'])->name('front.about');
@@ -31,3 +32,8 @@ Route::get('/contact', [ContactController::class, 'contact'])->name('front.conta
 Route::get('/bloggrid', [BlogGridController::class, 'bloggrid'])->name('front.bloggrid');
 Route::get('/sidebar', [SideBarController::class, 'sidebar'])->name('front.sidebar');
 Route::get('/single', [SingleController::class,'single'])->name('front.single');
+
+Route::prefix('admin')->name('admin.')->group(function(){
+    Route::get('dashboard',[DashboardController::class, 'index'])->name('dashboard');    
+    });
+
