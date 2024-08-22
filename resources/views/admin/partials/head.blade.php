@@ -3,11 +3,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AdminLTE 3 | Starter</title>
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
 
-<link rel="stylesheet" href="{{ asset('assets/admin/admin.dashboard/fontawesome-free/css/all.min.css') }}">
-
-<link rel="stylesheet" href="{{ asset('assets/admin/admin.dashboard/css/adminate.css') }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
 
 
 
