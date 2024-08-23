@@ -72,9 +72,7 @@
 	</div>
 </section>
 
-<div class="google-map">
-	<div id="map" data-latitude="40.712776" data-longitude="-74.005974" data-marker="images/marker.png" data-marker-name="Megakit"></div>
-</div>
+
 
 
 <!--Scroll to top-->
@@ -99,8 +97,7 @@ Essential Scripts
 <script src="plugins/counterup/jquery.counterup.min.js"></script>
 
 <!-- Google Map -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
-<script src="plugins/google-map/map.js" defer></script>
+<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d387132.72890386515!2d-74.007347!3d40.707571!3m2!1i1024!2i768!4f13.1!5e0!3m2!1saz!2sus!4v1724431123020!5m2!1saz!2sus" width="1300" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <script src="js/script.js"></script>
 
