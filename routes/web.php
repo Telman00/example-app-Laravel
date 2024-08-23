@@ -23,6 +23,7 @@ use App\Http\Controllers\Front\BlogGridController;
 use App\Http\Controllers\Front\SideBarController;
 use App\Http\Controllers\Front\SingleController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\BlogController;
 
 Route::get('/', [HomeController::class, 'index'])->name('front.index');
 Route::get('/about', [HomeController::class, 'about'])->name('front.about');
@@ -35,5 +36,11 @@ Route::get('/single', [SingleController::class,'single'])->name('front.single');
 
 Route::prefix('admin')->name('admin.')->group(function(){
     Route::get('dashboard',[DashboardController::class, 'index'])->name('dashboard');    
+    Route::prefix('blog')->name('blog.')->group(function(){
+        Route::get('/', [BlogController::class, 'index'])->name('index');
+        Route::get('/create', [BlogController::class, 'create'])->name('create');
+
     });
+    
+});
 
