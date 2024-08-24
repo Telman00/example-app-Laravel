@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public function mega(){
+        return view('front.mega');
+    }
+    
     public function index(){
         return view('front.index');
     }

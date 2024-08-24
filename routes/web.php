@@ -25,6 +25,8 @@ use App\Http\Controllers\Front\SingleController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BlogController;
 
+Route::get('/mega', [HomeController::class, 'mega'])->name('front.mega');
+
 
 Route::get('/', [HomeController::class, 'index'])->name('front.index');
 Route::get('/about', [HomeController::class, 'about'])->name('front.about');
