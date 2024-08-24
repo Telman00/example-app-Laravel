@@ -9,7 +9,7 @@
 <div class="col-sm-6">
 <ol class="breadcrumb float-sm-right">
 <li class="breadcrumb-item"><a href="#">Home</a></li>
-<li class="breadcrumb-item"><a href="{{route('admin.blog.create')}}">Blog əlavə elə</a></li>
+<li class="breadcrumb-item"><a href="{{route('admin.blog.create')}}">Blog əlavə et</a></li>
 {{--<li class="breadcrumb-item active">Starter Page</li>--}}
 </ol>
 </div>

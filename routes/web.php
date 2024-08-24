@@ -39,7 +39,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
     Route::prefix('blog')->name('blog.')->group(function(){
         Route::get('/', [BlogController::class, 'index'])->name('index');
         Route::get('/create', [BlogController::class, 'create'])->name('create');
-
+        Route::post('/create', [BlogController::class, 'store'])->name('store');
     });
     
 });
