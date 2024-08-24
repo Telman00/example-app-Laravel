@@ -17,7 +17,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
                     <ul class="dropdown-menu" aria-labelledby="dropdown03">
                         <li><a class="dropdown-item" href="{{ route('front.about') }}">Our company</a></li>
-                        <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+                        <li><a class="dropdown-item" href="{{ route('front.pricing') }}">Pricing</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('front.services') }}">Services</a></li>

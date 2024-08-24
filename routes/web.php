@@ -25,14 +25,17 @@ use App\Http\Controllers\Front\SingleController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BlogController;
 
+
 Route::get('/', [HomeController::class, 'index'])->name('front.index');
 Route::get('/about', [HomeController::class, 'about'])->name('front.about');
+Route::get('/pricing', [HomeController::class,'pricing'])->name('front.pricing');
 Route::get('/services', [HomeController::class, 'services'])->name('front.services');
 Route::get('/portfolio', [PortfolioController::class, 'portfolio'])->name('front.portfolio');
 Route::get('/contact', [ContactController::class, 'contact'])->name('front.contact');
 Route::get('/bloggrid', [BlogGridController::class, 'bloggrid'])->name('front.bloggrid');
 Route::get('/sidebar', [SideBarController::class, 'sidebar'])->name('front.sidebar');
 Route::get('/single', [SingleController::class,'single'])->name('front.single');
+
 
 Route::prefix('admin')->name('admin.')->group(function(){
     Route::get('dashboard',[DashboardController::class, 'index'])->name('dashboard');    

@@ -1,5 +1,6 @@
 @extends('front.layout')
 @section('_content')
+
 <section class="page-title bg-1">
   <div class="container">
     <div class="row">
@@ -72,7 +73,9 @@
 	</div>
 </section>
 
-
+<div class="google-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d193575.9153320198!2d-74.010437!3d40.704285!3m2!1i1024!2i768!4f13.1!5e0!3m2!1saz!2sus!4v1724508851457!5m2!1saz!2sus" width="1300" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 
 
 <!--Scroll to top-->
@@ -97,12 +100,12 @@ Essential Scripts
 <script src="plugins/counterup/jquery.counterup.min.js"></script>
 
 <!-- Google Map -->
-<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d387132.72890386515!2d-74.007347!3d40.707571!3m2!1i1024!2i768!4f13.1!5e0!3m2!1saz!2sus!4v1724431123020!5m2!1saz!2sus" width="1300" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+<script src="plugins/google-map/map.js" defer></script>
 
 <script src="js/script.js"></script>
 
 </body>
 
 </html>
-
         @endsection
