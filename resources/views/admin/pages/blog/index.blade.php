@@ -10,7 +10,7 @@
 <ol class="breadcrumb float-sm-right">
 <li class="breadcrumb-item"><a href="#">Home</a></li>
 <li class="breadcrumb-item"><a href="{{route('admin.blog.create')}}">Blog əlavə et</a></li>
-{{--<li class="breadcrumb-item active">Starter Page</li>--}}
+<!-- {{--<li class="breadcrumb-item active">Starter Page</li>--}} -->
 </ol>
 </div>
 </div>
@@ -19,6 +19,16 @@
 
 <div class="content-header">
 <div class="container-fluid">
+@if (session()->has('success'))
+     <div class="alert alert-success" role="alert">
+       {{session('success')}}
+     </div>
+   @endif
+   @if (session()->has('error'))
+     <div class="alert alert-danger" role="alert">
+       {{session('error')}}
+     </div>
+   @endif
 <div class="row">
 <div class="col-12">
 <div class="card">
@@ -55,8 +65,15 @@
 <td>{{ $blog->content }}</td>
 <td>{{ $blog->created_at }}</td>
 <td>
-    <a class="btn btn-primary"href="">Sil</a>
-    <a class="btn btn-primary"href="">Editlə</a>
+<a class="btn btn-primary d-inline-block" href="{{ route('admin.blog.edit.id', $blog->id) }}">Editlə</a>
+
+<form action="{{ route('admin.blog.delete.id', $blog->id) }}" method="POST" class="d-inline-block">
+
+    @method('DELETE')
+    @csrf
+    <button type="submit" class="btn btn-primary">Sil</button>
+</form>
+  
 </td>
 
 </tr>

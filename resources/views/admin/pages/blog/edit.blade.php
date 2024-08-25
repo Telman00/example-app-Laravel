@@ -43,12 +43,14 @@
 
 
 
-<form method="POST" action="{{route('admin.blog.store')}}">
+<form method="POST" action="{{route('admin.blog.update.id',$blog->id)}}">
+
   @csrf
+@method('PUT')
 <div class="card-body">
 <div class="form-group">
 <label for="exampleInputEmail1">Blog Başlıq</label>
-<input type="text" class="form-control" id="exampleInputEmail1" name="title" placeholder="Enter Title">
+<input type="text" class="form-control" id="exampleInputEmail1" value="{{$blog->title}}" name="title" placeholder="Enter Title">
 </div>
 <!-- {{--<div class="form-group">
 <label for="exampleInputFile">File input</label>
@@ -68,7 +70,7 @@
 </div> --}} -->
 
 <div class="form-group">
-<textarea id="summernote"name="content">
+<textarea id="summernote"name="content">{{$blog->content}}
               </textarea>
 </div>
 </div>
