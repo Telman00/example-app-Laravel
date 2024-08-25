@@ -25,6 +25,7 @@ use App\Http\Controllers\Front\SingleController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BlogController;
 
+
 Route::get('/mega', [HomeController::class, 'mega'])->name('front.mega');
 
 
@@ -40,12 +41,13 @@ Route::get('/single', [SingleController::class,'single'])->name('front.single');
 
 
 Route::prefix('admin')->name('admin.')->group(function(){
-    Route::get('dashboard',[DashboardController::class, 'index'])->name('dashboard');    
-    Route::prefix('blog')->name('blog.')->group(function(){
-        Route::get('/', [BlogController::class, 'index'])->name('index');
-        Route::get('/create', [BlogController::class, 'create'])->name('create');
-        Route::post('/create', [BlogController::class, 'store'])->name('store');
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::prefix('blog')->group(function(){
+        Route::get('/', [BlogController::class, 'index'])->name('blog.index');
+        Route::get('/create', [BlogController::class, 'create'])->name('blog.create');
+        Route::post('/create', [BlogController::class, 'store'])->name('blog.store');
     });
-    
+
 });
 

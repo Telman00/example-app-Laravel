@@ -17,8 +17,10 @@ class BlogController extends Controller
         //$blogs =[];
         //return view('admin.pages.blog.index', compact('blogs'));
         return view('admin.pages.blog.index', ['blogs'=>$blogs]);
+  
     }
 
+    
     /**
      * Show the form for creating a new resource.
      */
