@@ -108,6 +108,7 @@ class BlogController extends Controller
     {
         try {
             DB::beginTransaction();
+            $blog = Blog::findOrFail($id);
             $blog->update([
                 'title' => $request->title,
                 'content' => $request->content
@@ -139,11 +140,11 @@ class BlogController extends Controller
     {
         try {
             $blog=Blog::findOrFail($id);
+            DB::beginTransaction();
             $blog=Blog::find($id);
             if(!$blog){
                 return back()->with('error', 'Blog Tapılmadı.');  
             }
-            DB::beginTransaction();
             $blog->delete();
             DB::commit();
             return back()->with('success', 'Blog Silindi.');
@@ -152,4 +153,5 @@ class BlogController extends Controller
             return back()->with('error', 'Blog Silinən Zaman Xəta Baş Verdi.');
            }
     }
+    
 }
