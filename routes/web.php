@@ -24,6 +24,7 @@ use App\Http\Controllers\Front\SideBarController;
 use App\Http\Controllers\Front\SingleController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\LoginController;
 
 
 Route::get('/mega', [HomeController::class, 'mega'])->name('front.mega');
@@ -40,7 +41,7 @@ Route::get('/sidebar', [SideBarController::class, 'sidebar'])->name('front.sideb
 Route::get('/single', [SingleController::class,'single'])->name('front.single');
 
 
-Route::prefix('admin')->name('admin.')->group(function(){
+Route::prefix('admin')->middleware('auth')->name('admin.')->group(function(){
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::prefix('blog')->name('blog.')->group(function(){
@@ -58,3 +59,9 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
 });
 
+Route::get('/admin/login',function(){
+    //auth()->logout();
+    return view('login.index');
+});
+
+Route::post('/admin/login',[LoginController::class,'login'])->name('login');
