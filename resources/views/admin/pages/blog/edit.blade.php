@@ -42,9 +42,11 @@
          </div>
 
 
+{{--
+  <!-- <form method="POST" action="{{route('admin.blog.update.id',$blog->id)}}"> -->
+  --}}
 
-<form method="POST" action="{{route('admin.blog.update.id',$blog->id)}}">
-
+<form method="POST" action="{{route('admin.blog.update',$blog)}}">
   @csrf
 @method('PUT')
 <div class="card-body">

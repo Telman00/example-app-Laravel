@@ -65,15 +65,25 @@
 <td>{{ $blog->content }}</td>
 <td>{{ $blog->created_at }}</td>
 <td>
-<a class="btn btn-primary d-inline-block" href="{{ route('admin.blog.edit.id', $blog->id) }}">Editlə</a>
 
-<form action="{{ route('admin.blog.delete.id', $blog->id) }}" method="POST" class="d-inline-block">
+<a class="btn btn-primary d-inline-block" href="{{ route('admin.blog.edit', $blog) }}">Editlə</a>
+
+<form action="{{ route('admin.blog.delete', $blog) }}" method="POST" class="d-inline-block">
 
     @method('DELETE')
     @csrf
     <button type="submit" class="btn btn-primary">Sil</button>
 </form>
-  
+{{-- 
+<!-- <a class="btn btn-primary d-inline-block" href="{{ route('admin.blog.edit.id', $blog->id) }}">Editlə</a>
+
+<form action="{{ route('admin.blog.delete.id', $blog->id) }}" method="POST" class="d-inline-block">
+    @method('DELETE')
+    @csrf
+    <button type="submit" class="btn btn-primary">Sil</button>
+</form>  -->
+--}}
+
 </td>
 
 </tr>
