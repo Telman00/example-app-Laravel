@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\Admin\Blog\BlogStoreRequest;
 use App\Models\Blog;
 
 class BlogController extends Controller
@@ -88,8 +90,9 @@ class BlogController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Blog $blog)
+    public function update(BlogStoreRequest $request, Blog $blog)
     {
+   $request = $request->all();
         try {
             DB::beginTransaction();
             $blog->update([
@@ -126,6 +129,7 @@ class BlogController extends Controller
     public function destroy(Blog $blog)
     {
         try {
+
             DB::beginTransaction();
             $blog->delete();
             DB::commit();

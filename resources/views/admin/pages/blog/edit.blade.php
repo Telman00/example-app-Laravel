@@ -52,8 +52,11 @@
 <div class="card-body">
 <div class="form-group">
 <label for="exampleInputEmail1">Blog Başlıq</label>
-<input type="text" class="form-control" id="exampleInputEmail1" value="{{$blog->title}}" name="title" placeholder="Enter Title">
+<input type="text" class="form-control @error('title') is-invalid @enderror" id="exampleInputEmail1" value="{{$blog->title}}" name="title" placeholder="Enter Title">
 </div>
+@error('title')
+    <span>{{ $message }}</span>
+    @enderror
 <!-- {{--<div class="form-group">
 <label for="exampleInputFile">File input</label>
 <div class="input-group">
@@ -72,8 +75,11 @@
 </div> --}} -->
 
 <div class="form-group">
-<textarea id="summernote"name="content">{{$blog->content}}
-              </textarea>
+<textarea id="summernote"name="content">{{$blog->content}} 
+</textarea>
+@error('content')
+<span>{{ $message }}</span>
+@enderror
 </div>
 </div>
 
