@@ -38,7 +38,7 @@
             </ul>
 
             <form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
-                <a href="{{ route('admin.dashboard') }}" class="btn btn-solid-border btn-round-full">Get a Quote</a>
+                <a href="{{ route('login') }}" class="btn btn-solid-border btn-round-full">Get a Quote</a>
             </form>
         </div>
     </div>
