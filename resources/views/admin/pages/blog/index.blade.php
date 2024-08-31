@@ -53,6 +53,7 @@
 <th>ID</th>
 <th>Title</th>
 <th>Content</th>
+<th>Şəkil</th>
 <th>Yaranma Tarixi</th>
 <th>Əməliyyatlar</th>
 </tr>
@@ -62,7 +63,8 @@
 <tr>
 <td>{{ $blog->id }}</td>
 <td>{{ $blog->title }}</td>
-<td>{{ $blog->content }}</td>
+<td>{{ substr($blog->content,0,15) }}</td>
+<td><img src="{{asset('storage/'. $blog->image) }}" style="height: 50px;width: 50px"  alt="" srcset=""> </td>
 <td>{{ $blog->created_at }}</td>
 <td>
 

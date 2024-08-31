@@ -60,8 +60,17 @@ Route::prefix('admin')->middleware('auth')->name('admin.')->group(function(){
 });
 
 Route::get('/admin/login',function(){
-    //auth()->logout();
+    auth()->logout();
     return view('login.index');
 });
 
-Route::post('/admin/login',[LoginController::class,'login'])->name('login');
+
+// Route::get('test',function(){
+//      dd(auth()->user());
+// });
+
+
+Auth::routes();
+
+Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('admin.home');
+

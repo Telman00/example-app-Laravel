@@ -43,12 +43,12 @@
 
 
 
-<form method="POST" action="{{route('admin.blog.store')}}">
+<form method="POST" action="{{route('admin.blog.store')}}" enctype="multipart/form-data">
   @csrf
 <div class="card-body">
 <div class="form-group">
 <label for="exampleInputEmail1">Blog Başlıq</label>
-<input type="text" class="form-control" id="exampleInputEmail1" name="title" placeholder="Enter Title">
+<input type="text" class="form-control" value="{{old('title')}}" id="exampleInputEmail1" name="title" placeholder="Enter Title">
 </div>
 <!-- {{--<div class="form-group">
 <label for="exampleInputFile">File input</label>
@@ -68,14 +68,27 @@
 </div> --}} -->
 
 <div class="form-group">
-<textarea id="summernote"name="content">
-              </textarea>
+<textarea id="summernote"name="content">{{old('content')}}
+</textarea>
+</div>
+<div class="form-group">
+<label for="exampleInputFile">File input</label>
+<div class="input-group">
+<div class="custom-file">
+<input type="file" class="custom-file-input" name = "file" id="file">
+<label class="custom-file-label" for="exampleInputFile">Choose file</label>
+</div>
+<div class="input-group-append">
+<span class="input-group-text">Upload</span>
+</div>
+</div>
 </div>
 </div>
 
 <div class="card-footer">
 <button type="submit" class="btn btn-primary">Submit</button>
 </div>
+
 </form>
 </div>
 
