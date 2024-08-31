@@ -25,7 +25,7 @@ use App\Http\Controllers\Front\SingleController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\LoginController;
-
+use App\Http\Controllers\Admin\CategoryController;
 
 Route::get('/mega', [HomeController::class, 'mega'])->name('front.mega');
 
@@ -56,7 +56,7 @@ Route::prefix('admin')->middleware('auth')->name('admin.')->group(function(){
         // Route::delete('/delete/{blog}', [BlogController::class, 'destroyID'])->name('delete.id');
 
     });
-
+Route::resource('category',CategoryController::class);
 });
 
 Route::get('/admin/login',function(){

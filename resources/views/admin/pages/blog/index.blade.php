@@ -54,6 +54,7 @@
 <th>Title</th>
 <th>Content</th>
 <th>Şəkil</th>
+<th>Category</th>
 <th>Yaranma Tarixi</th>
 <th>Əməliyyatlar</th>
 </tr>
@@ -65,6 +66,7 @@
 <td>{{ $blog->title }}</td>
 <td>{{ substr($blog->content,0,15) }}</td>
 <td><img src="{{asset('storage/'. $blog->image) }}" style="height: 50px;width: 50px"  alt="" srcset=""> </td>
+<td>{{ $blog->category->name }}</td>
 <td>{{ $blog->created_at }}</td>
 <td>
 

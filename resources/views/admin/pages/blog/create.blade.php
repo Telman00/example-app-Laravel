@@ -46,6 +46,15 @@
 <form method="POST" action="{{route('admin.blog.store')}}" enctype="multipart/form-data">
   @csrf
 <div class="card-body">
+  <div class="form-group">
+<label for="exampleInputEmail1">Category</label>
+  <select name="category_id" class="custom-select form-control-border" id="exampleSelectBorder">
+  <option disabled selected>Category Seç</option>
+  @foreach($categories as $category)
+    <option value>"{{$category->id}}"</option>
+    @endforeach
+</select>
+  </div>
 <div class="form-group">
 <label for="exampleInputEmail1">Blog Başlıq</label>
 <input type="text" class="form-control" value="{{old('title')}}" id="exampleInputEmail1" name="title" placeholder="Enter Title">

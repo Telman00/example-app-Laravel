@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin\Blog;
+namespace App\Http\Requests\Admin\Category;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class BlogStoreRequest extends FormRequest
+class CategoryUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,10 +22,7 @@ class BlogStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-        'category_id'=>['required','integer','exists:categories,id'],
-        'title' =>['required','min:5','max:50'],
-        'content' =>'required|min:20',
-        'file'=>['nullable','image'],
-    ];
+            'name'=>['required','min:5','max:15'],
+        ];
     }
 }
