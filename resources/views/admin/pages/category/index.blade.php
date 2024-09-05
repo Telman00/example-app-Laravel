@@ -54,10 +54,10 @@
                         <thead>
                           <tr>
                             <th>ID</th>
-                            <th>Title</th>
-                            <th>Blog Sayi</th>
-                            <th>Yaranama tarixi</th>
-                            <th>Emeliyatlar</th>
+                            <th>Name</th>
+                            <th>Blog Sayı</th>
+                            <th>Yaranma tarixi</th>
+                            <th>Əməliyyatlar</th>
                           </tr>
                         </thead>
                         <tbody>
