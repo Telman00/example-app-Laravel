@@ -67,12 +67,12 @@
                             <td>{{ $category->name }}</td>
                             <td>{{ $category->blogs_count }}</td>
                             <td>{{ $category->created_at }}</td>
-                            <td>
+                            <td class ="d-flex">
                                 <a class="btn btn-primary" href="{{ route('admin.category.edit',$category) }}">Editle</a>
                                 <form action="{{ route('admin.category.destroy',$category) }}" method="post">
                                   @method('DELETE')
                                   @csrf
-                                  <button type="submit" class="btn btn-primary" >Sil</button>
+                                  <button type="submit" class="btn btn-primary ml-2" >Sil</button>
                                 </form>
                             </td>
                           </tr>
